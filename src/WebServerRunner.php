@@ -8,13 +8,13 @@ use Symfony\Component\Panther\ProcessManager\WebServerManager;
 
 class WebServerRunner
 {
-    private $webServerDir;
-    private $options = [];
+    private string $webServerDir;
 
     /**
-     * @var WebServerManager|null
+     * @var array<string, int|string>
      */
-    private $webServerManager;
+    private array $options;
+    private ?WebServerManager $webServerManager = null;
 
     /**
      * @param string $webServerDir

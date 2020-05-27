@@ -12,7 +12,7 @@ class Options
     /**
      * @var array<string, int|string>
      */
-    private static $default = [
+    private static array $default = [
         'hostname' => self::DEFAULT_HOSTNAME,
         'port' => self::DEFAULT_PORT,
     ];
@@ -20,7 +20,7 @@ class Options
     /**
      * @var array<string, int|string>
      */
-    private static $options = null;
+    private static ?array $options = null;
 
     /**
      * @return array<string, int|string>
