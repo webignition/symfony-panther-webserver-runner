@@ -22,8 +22,10 @@
         }
     },
     "scripts": {
+        "cs-ecs": "./vendor/bin/ecs check src tests --ansi --no-progress-bar --config ecs.php",
         "cs-phpcs": "./vendor/bin/phpcs",
         "cs": [
+            "@cs-ecs",
             "@cs-phpcs"
         ],
         "static-analysis": "./vendor/bin/phpstan analyse --ansi",
@@ -41,7 +43,8 @@
     "require-dev": {
         "phpstan/phpstan": "^0.12.75",
         "phpunit/phpunit": "^9.5",
-        "squizlabs/php_codesniffer": "^3.5"
+        "squizlabs/php_codesniffer": "^3.5",
+        "symplify/easy-coding-standard": "^9.1"
     },
     "config": {
         "sort-packages": true
