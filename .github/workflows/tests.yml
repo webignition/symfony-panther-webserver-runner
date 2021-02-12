@@ -26,6 +26,4 @@ jobs:
           args: --ignore-platform-reqs --quiet
 
       - name: Run PHPUnit unit tests
-        run: |
-          php -v
-          composer test
+        run: composer test
