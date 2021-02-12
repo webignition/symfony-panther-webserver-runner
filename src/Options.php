@@ -47,7 +47,11 @@ class Options
      */
     public static function set(array $options): void
     {
-        self::$options = array_merge(self::$options, $options);
+        if (is_array(self::$options)) {
+            self::$options = array_merge(self::$options, $options);
+        } else {
+            self::$options = $options;
+        }
     }
 
     public static function getBaseUri(): string

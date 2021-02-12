@@ -10,7 +10,7 @@ use webignition\SymfonyPantherWebServerRunner\WebServerRunner;
 
 class WebServerRunnerTest extends TestCase
 {
-    public function testStartStop()
+    public function testStartStop(): void
     {
         $webServerDir = __DIR__ . '/../Fixtures/html';
 
