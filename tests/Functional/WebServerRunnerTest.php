@@ -34,6 +34,8 @@ class WebServerRunnerTest extends TestCase
         $property = $reflectionObject->getProperty('webServerManager');
         $property->setAccessible(true);
 
-        return $property->getValue($webServerRunner);
+        $value = $property->getValue($webServerRunner);
+
+        return $value instanceof WebServerManager ? $value : null;
     }
 }
