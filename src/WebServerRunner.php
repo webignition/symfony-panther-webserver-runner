@@ -17,7 +17,6 @@ class WebServerRunner
     private ?WebServerManager $webServerManager = null;
 
     /**
-     * @param string $webServerDir
      * @param array<string, int|string> $options
      */
     public function __construct(string $webServerDir, array $options = [])
